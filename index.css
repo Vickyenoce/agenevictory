@@ -296,10 +296,10 @@ form input, form textarea{
 @media screen and (max-width: 768px){
 
 nav{
-padding:  1rem;
+padding:  0.8rem;
 height: auto;
 flex-direction: column;
-gap: 15px;
+gap: 1px;
 }
 
 nav ul{
