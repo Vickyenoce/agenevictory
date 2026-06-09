@@ -100,11 +100,45 @@ nav a:hover{
     color: var(--accent);
     background: var(--accent-dim);
 }
+nav ul li a {
+    color: var(--ink);
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: .3s ease;
+}
+nav ul li a :hover{
+    background: var(--accent-dim);
+    color: var(--accent);
+}
+.status{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent);
+    font-size: 0.85;
+}
+.status-dot{
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+}
+.intro{
+    color: var(--accent);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.role{
+    font-size: 1.2rem;
+    color: var(--blue);
+    margin: 15px 0;
+}
 .hero{
     min-height: 100vh;
     padding-top: var(--nav-height);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
 }
 .hero-left{
     padding: var(--space-xl) var(--space-lg);
@@ -120,6 +154,13 @@ nav a:hover{
  align-items: baseline;
  padding: 1rem  1.5rem;
   border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: .3s ease;
+}
+.stat:hover{
+    border-left: 3px solid var(--accent);
 }
  .about-stats .stat:first-child { 
     border-top: 1px solid var(--border);
@@ -200,13 +241,18 @@ button{
 }
 .cta-button{
     background-color: var(--accent);
-    color: var(--ink);
-    padding: 11px 20px;
-    border-radius: 30px;
+    color: var(--bg);
+    padding: 14px 24px;
+    border-radius: 50px;
     font-size: 12px;
     font-weight: 600;
     text-decoration: none;
     border: 2px solid var(--accent);
+    transition: all .3s ease;
+}
+.cta-button:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(62, 234, 170, 0.2);
 }
 .hero-button :hover{
     color: var(--ink);
@@ -214,17 +260,29 @@ button{
 
 }
 .bul{
-    font-size: var(--text-md);
+    /* font-size: var(--text-md);
     border:2px solid var(--accent);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-md); */
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 25px;
+    transition: all 0.3 ease;
+}
+.bul:hover{
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 15px 35px rgba(62, 234, 170, 0.12);
 }
 .bul h3{
-    font-size: var(--text-2xl);
-    padding: 3px;
+    font-size: 1.4rem;
+   color: var(--ink);
+   margin-bottom: 10px;
 }
 .bul p{
-    font-size: var(--text-md);
-    padding: 3px;
+    font-size: 0.95rem;
+    color: var(--ink-dim);
+    margin-top: 8px;
 }
 .project{
     gap: 28px;
@@ -232,22 +290,32 @@ button{
 }
 .project h3{
     font-size: var(--text-xl);
+    margin-bottom: 12px;
 }
 .project p{
     font-size: var(--text-md);
     padding: 3px;
+    margin-bottom: 15px;
 }
 .project ul{
     font-size: var(--text-md);
-    padding-left: 42px;
+    padding-left: 20px;
+    
 }
 .project h2{
     padding-bottom: 8px;
 }
 article{
-     border: 2px solid var(--accent);
-     padding-bottom: 45px;
-     margin-top: 14px;
+     border: 1px solid var(--border);
+     padding: 30px;
+     margin-top: 20px;
+     transition: all .3s ease;
+     border-radius: 18px;
+}
+article:hover{
+    transform: translateY(-8px);
+    border-color: var(--accent);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
 .about{
      gap: 28px;
@@ -288,26 +356,42 @@ form input, form textarea{
     width: 100%;
     padding: 15px ;
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: 10px;
     background: var(--surface);
+    color: var(--ink);
+    margin-top: 8px;
+    margin-bottom: 20px;
 }
+form input:focus, form textarea:focus{
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 15px rgba(62, 234, 170, 0.2);
+}
+section{
+    max-width: 1200px;
+    margin: auto;
+}
+
+
 
  /* ================= MOBILE RESPONSIVENESS ================= */
 @media screen and (max-width: 768px){
 
 nav{
-padding:  0.8rem;
+padding:  1rem;
 height: auto;
 flex-direction: column;
-gap: 1px;
+gap: 0px;
 }
 
 nav ul{
-gap: 15px;
+gap: 10px;
 flex-wrap: wrap;
 justify-content: center;
 }
-
+.status{
+    font-size: 12px;
+}
 .logo-text{
 font-size: 1.5rem;
 }
