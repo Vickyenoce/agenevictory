@@ -92,12 +92,19 @@ nav{
     /* gap: 0; */
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
+    background-color: var(--surface);
+    position: relative;
 }
 .nav li{
     border-left: 1px solid var(--border);
 }
 .nav-links{
-    display: none;
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
 }
 .nav-links.active{
     display: flex;
@@ -110,6 +117,11 @@ nav ul{
 .nav a{
     display: flex;
     align-items: center;
+}
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    transition: color .0.3s;
 }
 nav a:hover{
     color: var(--accent);
@@ -486,6 +498,10 @@ justify-content: center;
     width: 100%;
     text-align: center;
     padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav-links li:last-child{
+    border-bottom: none;
 }
 .nav-links.active{
     display: flex;
