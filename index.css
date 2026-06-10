@@ -456,7 +456,22 @@ section{
     border-color: var(--accent);
 
 }
+footer{
+    background: var(--surface);
+    color: var(--ink);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    font-size: 0.95rem;
+}
+footer p{
+    margin: 0;
+    opacity: 0.8;
+}
+footer p:hover{
+    opacity: 1;
 
+}
 
 
  /* ================= MOBILE RESPONSIVENESS ================= */
