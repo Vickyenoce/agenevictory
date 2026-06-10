@@ -7,32 +7,35 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<script>
+ <script>
     const menuBtn = document.querySelector(".menu-toggle"); 
     const navLinks = document.querySelector(".nav-links");
-    menuBtn.addEventListener ("click", () =>  {
+    if(menuBtn && navLinks){
+      menuBtn.addEventListener("click", () =>  {
         navLinks.classList.toggle("active");
     }) ;
+}
 </script>
+
 <body>
     
     <!-- NAVIGATION BAR -->
      <nav>
-         <div class="logo">
-                <div class="logo-icon">
+            <div class="logo">
+                <!-- <div class="logo-icon"> -->
                   <i class="fas fa-code"></i>
-                </div>
-             <div class="logo-text">V<span>.</span>A</div>
+                  <div class="logo-text">
+                    V<span>.</span>A </div>
             </div>
             <div class="menu-toggle">
                 <i class="fas fa-bars"></i>
             </div>
+        
         <ul class="nav-links">
             <li><a href="#stack">Stack</a></li>
             <li><a href="#project">Project</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
-
         </ul>
         <div class="status">
             <span class="status-dot"></span>
