@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<script>
+    const menuBtn = document.querySelector(".menu-toggle"); 
+    const navLinks = document.querySelector(".nav-links");
+    menuBtn.addEventListener ("click", () =>  {
+        navLinks.classList.toggle("active");
+    }) ;
+</script>
 <body>
     
     <!-- NAVIGATION BAR -->
@@ -15,9 +22,12 @@
                 <div class="logo-icon">
                   <i class="fas fa-code"></i>
                 </div>
-             <div class="logo-text">V/A<span></span></div>
+             <div class="logo-text">V<span>.</span>A</div>
             </div>
-        <ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        <ul class="nav-links">
             <li><a href="#stack">Stack</a></li>
             <li><a href="#project">Project</a></li>
             <li><a href="#about">About</a></li>
@@ -44,6 +54,14 @@
             <a href="#projects" class="cta-button">View my work</a>
             <a href="#contact" class="cta-button pti" >Get in touch</a>
             </div>
+             <div class="social-links">
+                <a href="https://githhub.com/Vickyenoce" target="_blank">
+                    <i class="fab fa-github"></i>Github
+                </a>
+                <a href="mailto: agenevictory44@gmail.com">
+                    <i class="fas fa-envelope"></i>Email
+                </a>
+            </div>
         </div>
         <div>
             <div class="about-stats fade-up">
@@ -56,7 +74,7 @@
             <span class="stat-label">Projects shipped</span>
         </div>
         <div class="stat">
-            <span class="stat-num">∞</span>
+            <span class="stat-num">24/7</span>
             <span class="stat-label">Passion for Web Developement</span>
         </div>
 </div>
@@ -64,10 +82,9 @@
         
       </section>
       <Section id="stack">
+         <h2>Tools I actually Use</h2>
         <div class="stack">
-            <h2>Tools I actually Use</h2>
             <div class="bul">
-       
             <h3>VS Code</h3>
             <p>Code Editor</p>
             <p>proficiency: 95%</p> 
@@ -126,6 +143,7 @@
                 I work with tools such as HTML, CSS, JavaScript, React, Figma, VS Code, and Github.
              </p>
         </div>
+       
         </div>
       </section>
       <section id="contact">
@@ -170,11 +188,14 @@
                  ></textarea>
             </div>
             <button type="submit">Send Message</button>
+
         </form>
         </div>
       </section>
       <footer>
         <p>&copy;2026 Vicky Agene. All rights reserved.</p>
+        
       </footer>
 </body>
+
 </html>
