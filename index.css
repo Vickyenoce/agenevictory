@@ -365,6 +365,10 @@ button{
     color: var(--ink);
     transition: all .3s ease;
 }
+.vs i{
+    font-size: 1.6rem;
+    padding: 9px;
+}
 .progress-bar{
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
@@ -461,7 +465,7 @@ button{
     gap: 0.5rem;
 }
 #stack{
-    padding: 0 20px;
+    padding-top:20px;
 }
 article{
      border: 1px solid var(--border);
