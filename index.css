@@ -31,7 +31,7 @@
     --leadind-normal: 1.6;
     --leadind-loose: 1.95;
     --radius: 3px;
-    --radius-md: 6px
+    --radius-md: 6px;
    
     
 }
@@ -133,7 +133,7 @@ nav ul li a {
     border-radius: 8px;
     transition: .3s ease;
 }
-nav ul li a :hover{
+nav ul li a:hover{
     background: var(--accent-dim);
     color: var(--accent);
 }
@@ -168,7 +168,7 @@ nav ul li a :hover{
     margin: 15px 0;
 }
 .hero{
-    /* min-height: 100vh; */
+    min-height: 100vh;
     padding-top: var(--nav-height);
     display: grid;
     grid-template-columns: 1.2fr 1fr;
@@ -179,18 +179,26 @@ nav ul li a :hover{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-right: 1px solid var(--border);
+    border-right: none;
     background: radial-gradient( rgba(62, 234, 170, 0.05) 0%, transparent 65%);
+}
+.hero-right{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 350px;
+    padding: 60px 30px;
 }
  .stat {
  display: flex; 
  justify-content: space-between; 
- align-items: baseline;
- padding: 24px;
+ align-items: center;
+ padding: 25px 30px;
   border-bottom: 1px solid var(--border);
   background: var(--surface);
   border-radius: 16px;
   margin-bottom: 15px;
+  /* max-width: 350px; */
   transition: .3s ease;
 }
 .stat:hover{
@@ -206,6 +214,7 @@ nav ul li a :hover{
     display: grid;
     gap: 18px;
     padding: 40px;
+    line-height: 1.6;
 }
  .stat-num {
  font-family: var(--font-display); 
@@ -215,7 +224,10 @@ nav ul li a :hover{
   display: block;
   margin-bottom: 8px;
 }
- .stat-label { color: var(--muted); font-size: 12px; letter-spacing: 0.05em; }
+ .stat-label { 
+    color: var(--muted); font-size: 12px; 
+    letter-spacing: 0.05em; 
+}
 
 h1{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -239,7 +251,7 @@ h3{
 }
 p{
     font-size: var(--text-base);
-    line-height: 1.9;
+    line-height: 1.6rem;
     color: var(--ink-dim);
 }
 a{
@@ -264,7 +276,7 @@ button{
 }
 .hero p{
     font-size: var(--text-md);
-    padding-top: 26px;
+    margin-top: 26px;
 }
 .hero a{
     padding-top: 20px;
@@ -284,6 +296,11 @@ button{
     margin-top: 30px;
     
 }
+.hero-button a {
+    min-width: 170px;
+    text-align: center;
+
+}
 .cta-button{
     display: inline-flex;
     align-items: center;
@@ -302,7 +319,7 @@ button{
     transform: translateY(-4px);
     box-shadow: 0 15px 30px rgba(62, 234, 170, 0.2);
 }
-.hero-button a :hover{
+.hero-button a:hover{
     color: var(--ink);
     box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 
@@ -374,12 +391,12 @@ button{
     background: linear-gradient(90deg, transparent, rgba(225, 255, 255, 0.2) transparent);
     animation: shine 2s infinite;
 }
-.profienciency{
+.proficiency{
     display: inline-block;
     font-size: 0.85rem;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: var(--accent);
-    margin-top: o.5rem;
+    margin-top: 0.5rem;
 }
 .tech-stack{
     display: flex;
@@ -465,6 +482,8 @@ article:hover{
 .about p{
     font-size: var(--text-md);
     padding-top: 16px;
+    line-height: 1.7;
+    max-width: 600px;
 }
 .contact{
      gap: 28px;
@@ -472,6 +491,8 @@ article:hover{
 }
 .contact p{
     font-size: var(--text-md);
+    line-height: 1.7;
+    max-width: 500px;
 }
 .contact h2{
     font-size: var(--text-2xl);
@@ -644,11 +665,16 @@ font-size: 1.5rem;
 .hero{
     padding-top: 100px;
 grid-template-columns: 1fr;
+gap: 40px;
 }
 
 .hero-left{
 border-right: none;
-/* padding: 2rem 1.5rem; */
+padding: 2rem 1.5rem;
+}
+.hero-right{
+    width: 100%;
+    padding: 0 1.5rem;
 }
 
 h1{
@@ -668,15 +694,341 @@ font-size: 0.95rem;
 }
 
 .hero-button{
-flex-direction: column;
+flex-direction: row;
+flex-wrap: wrap;
 gap: 15px;
 }
 
 .cta-button{
+width: auto;
+max-width: none;
+/* margin: auto;
+padding: 14px 24px; */
+}
+
+.stack{
+grid-template-columns: 1fr;
+}
+
+.project ul{
+padding-left: 20px;
+}
+
+form{
+padding: 1rem;
+}
+
+form input,
+form textarea{
 width: 100%;
-max-width: 250px;
-margin: auto;
-padding: 14px 24px;
+}
+
+.contact,
+.about,
+.project{
+padding: 1rem;
+}
+.about-stats{
+    padding: 20px;
+    margin-top: 30px;
+}
+.stat{
+padding: 20px;
+}
+
+.stat-num{
+font-size: 1.5rem;
+}
+.status{
+    display: none;
+}
+.social-links{
+    justify-content: center;
+}
+.social-links a{
+    width: 140px;
+    justify-content: center;
+}
+.tech-stack{
+    gap: 0.6rem;
+}
+.tech-stack span{
+    padding: 0.3rem 0.8rem;
+    font-size: 0.75rem;
+}
+.btn-live{
+    justify-content: center;
+}
+}
+@media screen and (max-width: 768px){
+.menu-toggle{
+    display: block;
+    font-size: 1.8rem;
+    color: var(--accent);
+    cursor: pointer;
+}
+nav{
+padding:0  20px;
+height: 70px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+nav ul{
+gap: 10px;
+flex-wrap: wrap;
+justify-content: center;
+}
+.nav-links{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: var(--surface);
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 0;
+    display: none;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+.nav-links li{
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav-links li:last-child{
+    border-bottom: none;
+}
+.nav-links.active{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: var(--surface);
+    padding: 20px 0;
+    border-radius:0 15px 15px;
+}
+.nav p{
+    display: none;
+}
+.status{
+    font-size: 12px;
+}
+.logo-text{
+font-size: 1.5rem;
+}
+
+.hero{
+    padding-top: 100px;
+grid-template-columns: 1fr;
+gap: 40px;
+}
+
+.hero-left{
+border-right: none;
+padding: 2rem 1.5rem;
+}
+.hero-right{
+    width: 100%;
+    padding: 0 1.5rem;
+}
+
+h1{
+font-size: 2.5rem;
+}
+
+h2{
+font-size: 2rem;
+}
+
+h3{
+font-size: 1.1rem;
+}
+
+p{
+font-size: 0.95rem;
+}
+
+.hero-button{
+flex-direction: row;
+flex-wrap: wrap;
+gap: 15px;
+}
+
+.cta-button{
+width: auto;
+max-width: none;
+/* margin: auto;
+padding: 14px 24px; */
+}
+
+.stack{
+grid-template-columns: 1fr;
+}
+
+.project ul{
+padding-left: 20px;
+}
+
+form{
+padding: 1rem;
+}
+
+form input,
+form textarea{
+width: 100%;
+}
+
+.contact,
+.about,
+.project{
+padding: 1rem;
+}
+.about-stats{
+    padding: 20px;
+    margin-top: 30px;
+}
+.stat{
+padding: 20px;
+}
+
+.stat-num{
+font-size: 1.5rem;
+}
+.status{
+    display: none;
+}
+.social-links{
+    justify-content: center;
+}
+.social-links a{
+    width: 140px;
+    justify-content: center;
+}
+.tech-stack{
+    gap: 0.6rem;
+}
+.tech-stack span{
+    padding: 0.3rem 0.8rem;
+    font-size: 0.75rem;
+}
+.btn-live{
+    justify-content: center;
+}
+}
+@media screen and (max-width: 900px){
+.menu-toggle{
+    display: block;
+    font-size: 1.8rem;
+    color: var(--accent);
+    cursor: pointer;
+}
+nav{
+padding:0  20px;
+height: 70px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+nav ul{
+gap: 10px;
+flex-wrap: wrap;
+justify-content: center;
+}
+.nav-links{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: var(--surface);
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 0;
+    display: none;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+.nav-links li{
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav-links li:last-child{
+    border-bottom: none;
+}
+.nav-links.active{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: var(--surface);
+    padding: 20px 0;
+    border-radius:0 15px 15px;
+}
+.nav p{
+    display: none;
+}
+.status{
+    font-size: 12px;
+}
+.logo-text{
+font-size: 1.5rem;
+}
+
+.hero{
+    padding-top: 100px;
+grid-template-columns: 1fr;
+gap: 40px;
+}
+
+.hero-left{
+border-right: none;
+padding: 2rem 1.5rem;
+}
+.hero-right{
+    width: 100%;
+    padding: 0 1.5rem;
+}
+
+h1{
+font-size: 2.5rem;
+}
+
+h2{
+font-size: 2rem;
+}
+
+h3{
+font-size: 1.1rem;
+}
+
+p{
+font-size: 0.95rem;
+}
+
+.hero-button{
+flex-direction: row;
+flex-wrap: wrap;
+gap: 15px;
+}
+
+.cta-button{
+width: auto;
+max-width: none;
+
+/* margin: auto;
+padding: 14px 24px; */
 }
 
 .stack{
@@ -753,4 +1105,9 @@ font-size: 1.2rem;
 button{
 width: 100%;
 }
+}
+@media screen and (min-width: 901px){
+    .hero-left{
+        border-right: 1px solid var(--border);
+    }
 }
